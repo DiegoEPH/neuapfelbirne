@@ -1,19 +1,20 @@
 package my_project.model;
 
-import KAGO_framework.model.GraphicalObject;
+
 import KAGO_framework.view.DrawTool;
 
-public class Pear extends GraphicalObject {
+public class Pear extends Fruit {
 
     //Attribute
-    private double speed;
+    private double sin;{
+        sin=0;
+    }
 
     public Pear(double x, double y){
-        this.x = x;
-        this.y = y;
-        speed = 150;
+        super(x,y);
         width = 25;
         height = 35;
+
     }
 
     @Override
@@ -26,10 +27,19 @@ public class Pear extends GraphicalObject {
 
     @Override
     public void update(double dt) {
-            y=y+100*dt;
-        jumpBack();
+        super.update(dt);
+        sin += 10*dt;
+        x += Math.sin(sin)*10;
+
+
+        }
+
+
+
+
+
         //TODO 03 Eine Birne soll von oben herab fallen. Sobald sie unten den Bildschirmrand berührt wird die Methode jumpBack() aufgerufen (siehe TODO 04).
-    }
+
     public void jumpBack(){
         if (y>1000){
             y=0;

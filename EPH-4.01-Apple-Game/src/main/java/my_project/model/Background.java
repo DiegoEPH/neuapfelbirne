@@ -18,8 +18,9 @@ public class Background extends GraphicalObject {
             "\"Una mela al giorno toglie il medico di torno.\" - Italien",
             "\"Jedna jabuka na dan, i doktor ti neće ući u stan.\" - Serbien",
             "\"Günde bir elma Doktoru uzak tutar.\" - Türkei",
-            "\"Rojek sêvek doktor dûr dike\" - Kurdisch",
-            "\"تفاحة على الريق تغنيك عن الطبيب\" - Arabisch"};
+            "\"Rojek sêvek doktor dûr dike\" - Kurdisch"
+    };
+
 
 
     public Background(){
