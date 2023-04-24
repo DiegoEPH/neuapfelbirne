@@ -3,14 +3,16 @@ package my_project.model;
 
 import KAGO_framework.view.DrawTool;
 
-public class Pear extends Fruit {
+import java.awt.*;
+
+public class PowerPear extends Fruit {
 
     //Attribute
     private double sin;{
         sin=0;
     }
 
-    public Pear(double x, double y){
+    public PowerPear(double x, double y){
         super(x,y);
         width = 25;
         height = 35;
@@ -19,7 +21,7 @@ public class Pear extends Fruit {
 
     @Override
     public void draw(DrawTool drawTool) {
-        drawTool.setCurrentColor(0,255,0,255);
+        drawTool.setCurrentColor(new Color(131, 23, 194));
         drawTool.drawFilledRectangle(x,y,width,height);
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.drawRectangle(x,y,width,height);
@@ -32,7 +34,7 @@ public class Pear extends Fruit {
         x += Math.sin(sin)*10;
         fall();
 
-        }
+    }
 
 
 
@@ -49,7 +51,3 @@ public class Pear extends Fruit {
         }
     }
 }
-
-//TODO 04 Lege eine Methode jumpBack() an, die bei Aufruf das Pear-Objekt oben am oberen Bildschirmrand an einer zufälligen x-Position positioniert.
-
-

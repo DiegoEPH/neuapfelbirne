@@ -16,15 +16,10 @@ public class Fruit extends GraphicalObject {
     public void update(double dt) {
         y = y + 100 * dt;
 
-        jumpBack();
         //TODO 01 Ein Apfel soll von oben herab fallen. Sobald er unten den Bildschirmrand berührt wird die Methode jumpBack() aufgerufen (siehe TODO 02).
     }
 
-    public void jumpBack(){
-        y=-200;
-        x=Math.random()*800+100;
 
-    }
 
     }
 

@@ -23,17 +23,22 @@ public class Apple extends Fruit {
     @Override
     public void update(double dt) {
     super.update (dt);
+    fall();
 
 
     }
     public void jumpBack(){
-        if (y>1000){
-            y=0;
-            x=Math.random()*300;
-        }
+        y=-200;
+        x=Math.random()*800+100;
 
+    }
+    public void fall(){
+        if (y>1000){
+        jumpBack();
+        }
+    }
     }
 
 
 
-}
+

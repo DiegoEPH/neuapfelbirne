@@ -3,9 +3,10 @@ package my_project.model;
 import KAGO_framework.model.InteractiveGraphicalObject;
 import KAGO_framework.view.DrawTool;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class Player extends InteractiveGraphicalObject {
+public class SecondPlayer extends InteractiveGraphicalObject {
 
 
     //Attribute
@@ -17,21 +18,21 @@ public class Player extends InteractiveGraphicalObject {
     private int keyToGoRight;
     private int direction;
 
-    public Player(double x, double y){
+    public SecondPlayer(double x, double y){
         this.x = x;
         this.y = y;
         speed = 150;
         width = 80;
         height = 40;
 
-        this.keyToGoLeft    = KeyEvent.VK_A;
-        this.keyToGoRight   = KeyEvent.VK_D;
+        this.keyToGoLeft    = KeyEvent.VK_J;
+        this.keyToGoRight   = KeyEvent.VK_L;
         this.direction      = -1; //-1 keine Bewegung, 0 nach rechts, 2 nach links
     }
 
     @Override
     public void draw(DrawTool drawTool) {
-        drawTool.setCurrentColor(157,152,3,255);
+        drawTool.setCurrentColor(new Color(199, 45, 45));
         drawTool.drawFilledRectangle(x,y,width,height);
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.drawRectangle(x,y,width,height);
@@ -51,7 +52,7 @@ public class Player extends InteractiveGraphicalObject {
             x=0;
         }
         if(x > 900){
-           x=900;
+            x=900;
         }
     }
 
@@ -76,7 +77,16 @@ public class Player extends InteractiveGraphicalObject {
             direction = -1;
         }
     }
-}
+    public double getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+    public double getWidth(){
+        return width;
+    }
     public void setWidth(double width) {
         this.width = width;
     }
