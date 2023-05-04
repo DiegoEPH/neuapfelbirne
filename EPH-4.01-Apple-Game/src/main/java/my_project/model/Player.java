@@ -76,6 +76,16 @@ public class Player extends InteractiveGraphicalObject {
             direction = -1;
         }
     }
+    public double getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
+    public double getWidth(){
+        return width;
 }
     public void setWidth(double width) {
         this.width = width;

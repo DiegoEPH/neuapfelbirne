@@ -114,6 +114,57 @@ public class ProgramController {
 
 
         }
+        if (checkAndHandleCollision(pear01)) {
+            pear01.jumpBack();
+
+
+        }
+        if (checkAndHandleCollision(pear02)) {
+            pear02.jumpBack();
+
+
+        }
+        if (checkAndHandleCollision(pear03)) {
+           pear03.jumpBack();
+
+
+        }
+        if (checkAndHandleCollision(pear04)) {
+            pear04.jumpBack();
+
+
+        }
+        if (checkAndHandleCollision(pear05)) {
+            pear05.jumpBack();
+
+
+        }
+        if (checkAndHandleCollision(banane01)) {
+            banane01.jumpBack();
+
+
+        }
+        if (checkAndHandleCollision(powerApple01)) {
+            powerApple01.jumpBack();
+            player01.setSpeed(player01.getSpeed()+Math.random()+500);
+            secondPlayer01.setSpeed(secondPlayer01.getSpeed()+Math.random()+500);
+
+
+        }
+        if (checkAndHandleCollision(rottenApple01)) {
+            rottenApple01.jumpBack();
+            player01.setSpeed(50);
+            secondPlayer01.setSpeed(50);
+
+
+        }
+        if (checkAndHandleCollision(powerPear01)) {
+            powerPear01.jumpBack();
+            player01.setWidth(player01.getWidth()+30);
+            secondPlayer01.setWidth(secondPlayer01.getWidth()+30);
+
+
+        }
 
 
 
